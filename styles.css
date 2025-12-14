@@ -1,0 +1,245 @@
+/* =========================
+   VARIABLES Y ESTILOS BASE
+========================= */
+:root {
+  --primary: #0d47a1;
+  --secondary: #1976d2;
+  --success: #2e7d32;
+  --error: #c62828;
+  --bg: #f4f6f8;
+  --text: #1b1b1b;
+
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,.1);
+  --transition: 0.3s ease;
+
+  --font: 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2 {
+  margin-bottom: 12px;
+}
+
+.container {
+  padding: 32px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 64px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  margin: 4px;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background: var(--secondary);
+}
+
+.btn--secondary {
+  background: #90caf9;
+  color: #0d47a1;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+.form {
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid #cfd8dc;
+  transition: border var(--transition);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+/* =========================
+   ALERTAS
+========================= */
+.alert {
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.alert--success {
+  background: #e8f5e9;
+  color: var(--success);
+}
+
+.alert--error {
+  background: #ffebee;
+  color: var(--error);
+}
+
+/* =========================
+   TOOLTIP
+========================= */
+.tooltip {
+  position: relative;
+  cursor: help;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* =========================
+   ACORDEÓN
+========================= */
+.accordion {
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #e3f2fd;
+}
+

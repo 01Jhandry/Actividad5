@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Library Profesional - Jahndry Loja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR PROFESIONAL -->
+  <nav class="navbar">
+    <div class="navbar__logo">Portal TIC - Jahndry Loja</div>
+    <ul class="navbar__menu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Documentación</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Biblioteca de Componentes UI</h1>
+    <p class="subtitle">Demostración profesional de componentes UI reutilizables para proyectos TIC.</p>
+
+    <!-- BOTONES FUNCIONALES -->
+    <section class="section">
+      <h2>Botones de Acción</h2>
+      <button class="btn btn--primary">Enviar Solicitud</button>
+      <button class="btn btn--secondary">Descargar Reporte</button>
+      <button class="btn btn--primary" disabled>Editar Perfil (Deshabilitado)</button>
+    </section>
+
+    <!-- TARJETAS PROFESIONALES -->
+    <section class="section">
+      <h2>Proyectos Recientes</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Sistema de Gestión de TIC</h3>
+          <p>Aplicación web para administración de recursos y seguimiento de proyectos TIC en la universidad.</p>
+          <button class="btn btn--primary">Ver Detalles</button>
+        </div>
+        <div class="card">
+          <h3>Portal de Estudiantes</h3>
+          <p>Interfaz web profesional para consultas académicas, registro de materias y envío de solicitudes.</p>
+          <button class="btn btn--secondary">Acceder</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO REALISTA -->
+    <section class="section">
+      <h2>Formulario de Contacto</h2>
+      <form class="form">
+        <div class="form-group">
+          <label>Nombre Completo</label>
+          <input type="text" class="input" placeholder="Jahndry Loja">
+        </div>
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <input type="email" class="input" placeholder="correo@ejemplo.com">
+        </div>
+        <div class="form-group">
+          <label>Departamento</label>
+          <select class="input">
+            <option>Seleccionar</option>
+            <option>Desarrollo</option>
+            <option>Infraestructura</option>
+            <option>Soporte</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea class="input" placeholder="Escriba su consulta o comentario..." rows="3"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox">
+          <label>Acepto los términos y condiciones</label>
+        </div>
+        <button class="btn btn--primary">Enviar Mensaje</button>
+      </form>
+    </section>
+
+    <!-- ALERTAS FUNCIONALES -->
+    <section class="section">
+      <h2>Alertas de Sistema</h2>
+      <div class="alert alert--success">✔ Mensaje enviado correctamente.</div>
+      <div class="alert alert--error">✖ Error al enviar el mensaje. Verifique los datos.</div>
+    </section>
+
+    <!-- TOOLTIP PROFESIONAL -->
+    <section class="section">
+      <h2>Tooltip Informativo</h2>
+      <p>Haga hover sobre el texto para más información:</p>
+      <span class="tooltip" data-tooltip="Este campo es obligatorio para enviar el formulario.">
+        Nombre Completo
+      </span>
+    </section>
+
+    <!-- ACORDEÓN CON FAQ PROFESIONAL -->
+    <section class="section">
+      <h2>Preguntas Frecuentes</h2>
+      <details class="accordion">
+        <summary>¿Cómo enviar una solicitud?</summary>
+        <p>Complete el formulario de contacto y haga clic en "Enviar Mensaje". Recibirá confirmación por correo.</p>
+      </details>
+      <details class="accordion">
+        <summary>¿Puedo descargar mis reportes?</summary>
+        <p>Los reportes están disponibles en la sección de Proyectos, haga clic en "Descargar Reporte" en la tarjeta correspondiente.</p>
+      </details>
+      <details class="accordion">
+        <summary>¿Dónde encontrar documentación del sistema?</summary>
+        <p>La documentación está disponible en la sección "Documentación" del menú principal.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Jahndry Loja - Ingeniería en TIC | Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
